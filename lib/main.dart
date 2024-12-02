@@ -3,11 +3,13 @@ import 'package:flutter_block/bloc/counter/counterk_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_block/bloc/favourite_app/favourite_app_bloc.dart';
 import 'package:flutter_block/bloc/image_picker/image_picker_bloc.dart';
+import 'package:flutter_block/bloc/post/posts_bloc.dart';
 import 'package:flutter_block/bloc/switch_block/switch_block.dart';
 import 'package:flutter_block/bloc/todo/todo_bloc.dart';
 import 'package:flutter_block/data/repository/FavouriteRepository.dart';
 import 'package:flutter_block/presentation/favourite_screen/favourite_screen.dart';
 import 'package:flutter_block/presentation/image_picker/image_picker_screen.dart';
+import 'package:flutter_block/presentation/posts_screen/post_screen.dart';
 import 'package:flutter_block/presentation/todo_list_screen/todo_screen.dart';
 
 import 'core/utils/image_picker_utils.dart';
@@ -38,6 +40,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => FavouriteAppBloc(FavouriteRepository()),
         ),
+        BlocProvider(
+          create: (context) => PostsBloc(),
+        ),
       ],
       child: MaterialApp(
           title: 'Bloc Play Ground',
@@ -46,7 +51,8 @@ class MyApp extends StatelessWidget {
             brightness: Brightness.dark,
             useMaterial3: true,
           ),
-          home: const FavouriteScreen()
+          home: const PostScreen()
+          // home: const FavouriteScreen()
           // home: const TodoScreen()
           // home: const ImagePickerScreen()
           // home: const SwitchWidget()
