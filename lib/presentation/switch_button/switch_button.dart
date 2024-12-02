@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_block/block/switch_block/switch_block.dart';
-import 'package:flutter_block/block/switch_block/switch_state.dart';
+import 'package:flutter_block/bloc/switch_block/switch_block.dart';
+import 'package:flutter_block/bloc/switch_block/switch_state.dart';
 
-import '../../block/switch_block/switch_event.dart';
+import '../../bloc/switch_block/switch_event.dart';
+
 
 class SwitchWidget extends StatelessWidget {
   const SwitchWidget({Key? key}) : super(key: key);
